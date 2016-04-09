@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html >
+<head>
+    
+    <link href="css/bootstrap.css" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    
+
+    
+    
+</head>
+<style ></style>
+<body >
+
+
+   <nav class="navbar navbar-default">
+     <img alt="Brand" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/English_Pok%C3%A9mon_logo.svg/2000px-English_Pok%C3%A9mon_logo.svg.png" width="10%">
+        <div class="navbar-brand">Pokedex</div>
+
+   </nav>
+
+    
+      <script id="pokemonity" type="text/template">
+      <div class="divs">
+            <div class="images"><img src="http://pokeapi.co/media/img/<%=pokemon.pkdx_id%>.png "></div>
+            <h3 class ="label label-info"><%=pokemon.name%></h3>
+            <ul class="list-group">
+
+            <% for(var i =0; i<pokemon.types.length; i++) {%>
+              <li class="list-gropu list-group-item list-group-item-success"><%=pokemon.types[i].name%></li>
+            <%}%>
+
+            </ul>
+      </div>
+      </script>
+
+      <script id="for_poky_table" type="text/template">
+        <div class="divs1">
+        <table class="table table-bordered table-hover">
+        <tr colspan=2><div class="im"><img src="http://pokeapi.co/media/img/<%=pokemon.pkdx_id%>.png " padding:"15%"><div></tr>
+            <th ><%=pokemon.name%></th> <th>#00<%=pokemon.pkdx_id%></th>
+            <tbody>
+              <tr>
+                 <td>Type</td><td><%=pokemon.types[0].name%></td>
+              </tr>
+
+              <tr>
+                 <td>Attack</td><td><%=pokemon.attack%></td>
+              </tr>
+
+            <tr>
+                 <td>Deffense</td><td><%=pokemon.defense%></td>
+              </tr>
+             <tr>
+                 <td>HP</td><td><%=pokemon.hp%></td>
+              </tr>
+             <tr>
+                 <td>SP Attack</td><td><%=pokemon.sp_atk%></td>
+              </tr>
+               <tr>
+                 <td>SP Deffense</td><td><%=pokemon.sp_def%></td>
+              </tr>
+               <tr>
+                 <td>Speed</td><td><%=pokemon.speed%></td>
+              </tr>
+               <tr>
+                 <td>Weight</td><td><%=pokemon.weight%></td>
+              </tr>
+               <tr>
+                 <td>Total Moves</td><td><%=pokemon.total%></td>
+              </tr>
+
+
+            </tbody>
+
+            </table>
+
+        </div>
+      </script>
+
+
+
+   <div class="container-fluid">
+        <div class="col-md-8"> 
+          <div id="poky-template" > </div>
+        </div>
+        <div class="col-md-4">
+          <div id="poky-table"> </div>
+        </div>
+    </div>
+    
+    <button type="button" class="btn btn-primary ">   Load more   </button>
+
+   
+
+   <script src="jquery-1.12.2.min.js"></script>
+   <script type="text/javascript" src="js/lodash.min.js"></script>
+    <script type="text/javascript" src="script/script.js"></script>
+
+
+</body>
+</html>
